@@ -5,7 +5,7 @@ REST API for facebook-user-info project
 
 ## Resources
 
-### Person
+### [Person](./resources/person.md)
 
 | Resource                                                  | Description            |
 |-----------------------------------------------------------|------------------------|
