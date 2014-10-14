@@ -63,3 +63,11 @@ def add_user():
         return '', 201
 
     return '', 400
+
+@app.route('/person', methods=['GET'])
+def list_users():
+    pass
+
+@app.route('/person/<facebook_id>', methods=['DELETE'])
+def delete_user(facebook_id):
+    pass
