@@ -11,7 +11,13 @@ Person REST Resource basic documentation
 ## POST /person
 
 Register a new user.  
-The system retrieves information about the user using a *facebook_id* and stores it in the database.
+The system retrieves information about the user using a *facebook_id* and stores it in the database.  
+  
+Information retrieved:
+- Facebook id
+- Name
+- Username
+- Gender
 
 ### Request
 
