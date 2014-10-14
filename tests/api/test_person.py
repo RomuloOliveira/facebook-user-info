@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+import json
 
 from project import app
 
@@ -27,3 +28,13 @@ class PersonTest(unittest.TestCase):
 
         res = self.client.post('/person', data=data)
         self.assertEquals(res.status_code, 400)
+
+    def test_list(self):
+        limit = 50
+        res = self.client.get('/person?limit={}'.format(limit))
+        self.assertEquals(res.status_code, 200)
+
+        json_res = json.loads(res.data)
+
+        self.assertIsInstance(json_res, list)
+        self.assertTrue(len(json_res) <= limit)

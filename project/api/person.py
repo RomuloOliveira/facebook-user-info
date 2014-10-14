@@ -66,7 +66,20 @@ def add_user():
 
 @app.route('/person', methods=['GET'])
 def list_users():
-    pass
+    limit_str = request.args.get('limit')
+
+    if limit_str is None: # Retrieve all
+        limit = None
+    else:
+        try:
+            limit = int(limit_str)
+        except ValueError: # not a number
+            return '', 400
+
+    persons = Persons.objects()[:limit].exclude('id')
+
+    return Response(persons.to_json(), mimetype='application/json; charset=utf-8')
+
 
 @app.route('/person/<facebook_id>', methods=['DELETE'])
 def delete_user(facebook_id):
