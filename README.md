@@ -26,6 +26,20 @@ The script `./bin/build.sh` already install all Python dependencies
 
 ### Instructions
 
+#### First steps
+
+1. Configure virtualenv
+
+```bash
+$ virtualenv venv
+```
+
+2. Activate virtualenv
+
+```bash
+$ source venv/bin/activate
+```
+
 #### How to run
 
 ```bash
