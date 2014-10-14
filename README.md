@@ -11,12 +11,15 @@ Please see [this link](./docs/api.md) for documentation.
 
 Requires: 
 - [Python 2.7](https://www.python.org/download/releases/2.7/)
+- [MongoDB](http://www.mongodb.org/), for database
 - [virtualenv](http://virtualenv.readthedocs.org/en/latest/)
 
 ### Dependencies
 
 - [Flask](http://flask.pocoo.org/), for API
-- [MongoDB](http://www.mongodb.org/), for database
+- [Flask WTForms](https://wtforms.readthedocs.org/en/latest/), for multipart/form-data requests
+- [Mongoengine](http://mongoengine.org/), a ODM (ORM for documents) to make our life easy
+- [Requests](http://docs.python-requests.org/), to make our life even easier
 - [flake8](https://pypi.python.org/pypi/flake8), to keep the code safe, clean and sane
 
 The script `./bin/build.sh` already install all Python dependencies
