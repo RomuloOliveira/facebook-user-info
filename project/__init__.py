@@ -17,3 +17,5 @@ if 'TEST' in os.environ and os.environ['TEST']:
 
 app.config['CSRF_ENABLED'] = False
 app.config['WTF_CSRF_ENABLED'] = False
+
+from project.api import *
