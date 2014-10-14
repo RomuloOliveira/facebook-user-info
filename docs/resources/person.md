@@ -59,7 +59,7 @@ Lists *limit* registered users information
 
 ```
 
-**REMARKS**: Top level arrays are NOT safe. See http://incompleteness.me/blog/2007/03/05/json-is-not-as-safe-as-people-think-it-is/.
+**REMARKS**: Top level arrays are NOT safe. See http://incompleteness.me/blog/2007/03/05/json-is-not-as-safe-as-people-think-it-is/ and http://haacked.com/archive/2008/11/20/anatomy-of-a-subtle-json-vulnerability.aspx/.
 
 
 ## DELETE /person/:id
