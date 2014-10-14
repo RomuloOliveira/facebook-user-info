@@ -3,6 +3,10 @@ facebook-user-info
 
 A webservice that collects and offers Facebook user infos through a REST api
 
+### API Documentation
+
+Please see [this link](./docs/api.md) for documentation.
+
 ### Environment
 
 Requires: 
