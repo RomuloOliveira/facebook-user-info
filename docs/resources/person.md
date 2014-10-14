@@ -4,9 +4,9 @@ Person
 Person REST Resource basic documentation
 
 ## Actions
-- POST /person
-- GET /person
-- DELETE /person
+- [POST /person](#post-person)
+- [GET /person](#get-personlimitlimit)
+- [DELETE /person](#delete-personid)
 
 ## POST /person
 
