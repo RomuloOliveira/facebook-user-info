@@ -29,7 +29,7 @@ class PersonTest(unittest.TestCase):
         res = self.client.post('/person', data=data)
         self.assertEquals(res.status_code, 400)
 
-    def test_list(self):
+    def test_list_limit(self):
         limit = 50
         res = self.client.get('/person?limit={}'.format(limit))
         self.assertEquals(res.status_code, 200)
@@ -38,3 +38,16 @@ class PersonTest(unittest.TestCase):
 
         self.assertIsInstance(json_res, list)
         self.assertTrue(len(json_res) <= limit)
+
+    def test_list_without_limit(self):
+        res = self.client.get('/person')
+        self.assertEquals(res.status_code, 200)
+
+        json_res = json.loads(res.data)
+
+        self.assertIsInstance(json_res, list)
+
+    def test_list_wrong_limit(self):
+        limit = -1
+        res = self.client.get('/person?limit={}'.format(limit))
+        self.assertEquals(res.status_code, 400)

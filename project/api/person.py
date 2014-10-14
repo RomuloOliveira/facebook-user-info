@@ -87,6 +87,9 @@ def list_users():
     else:
         try:
             limit = int(limit_str)
+
+            if limit < 0:
+                raise ValueError('Out of range')
         except ValueError: # not a number
             return '', 400
 
