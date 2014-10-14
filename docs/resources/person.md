@@ -22,7 +22,7 @@ Information retrieved:
 ### Request
 
 **Parameters**:
-- **facebook_id**: integer
+- **facebook_id**: string
   - Facebook user id
 
 **Content-type**: `multipart/form-data`  
@@ -74,7 +74,7 @@ Deletes a user where user.id=:id
 ### Request
 
 **Parameters**:
-- **id**: integer
+- **id**: string
   - Facebook user id
 
 **Example**: `curl ­X DELETE http://localhost:xxxx/person/100007710667474/`
