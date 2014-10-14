@@ -2,3 +2,4 @@ Flask==0.10.1
 Flask-WTF==0.10.2
 flake8==2.2.4
 mongoengine==0.8.7
+requests==2.4.3
