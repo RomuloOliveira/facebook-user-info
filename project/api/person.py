@@ -7,7 +7,7 @@ from project import app
 from project.forms.person import PersonForm
 from project.models.person import Persons
 
-from flask import request
+from flask import request, Response
 
 def retrieve_person_info(facebook_id):
     """Retrieves a person info based on a facebook id
@@ -44,10 +44,24 @@ def add_user():
         except Exception:
             return '', 400
 
-        person = Persons(
-            name=person_info['name'], facebook_id=person_info['facebook_id'],
-            gender=person_info['gender'], username=person_info['username']
-        )
+        #
+        # Remarks:
+        # We are explicitly retrieving a Person document and then saving
+        # We could just update the collection, without any validation
+        # However, let's use an advantage from our ODM: schema validation
+        #
+
+        try:
+            # Try to get existent person
+            person = Persons.objects.get(facebook_id=person_info['facebook_id'])
+        except Persons.DoesNotExist:
+            # Create a new Person instance
+            person = Persons(facebook_id=person_info['facebook_id'])
+
+        person.name = person_info['name']
+        person.facebook_id = person_info['facebook_id']
+        person.gender = person_info['gender']
+        person.username = person_info['username']
 
         # Validate before save
         try:

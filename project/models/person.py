@@ -9,7 +9,7 @@ class Persons(mongoengine.Document):
 
     Used in many /person calls
     """
-    facebook_id = StringField(required=True)
+    facebook_id = StringField(required=True, unique=True)
     username = StringField(required=True)
     name = StringField(required=True)
     gender = StringField(required=True)
