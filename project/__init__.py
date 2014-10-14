@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-
 import mongoengine
 
 from flask import Flask
@@ -22,4 +21,5 @@ app.config['WTF_CSRF_ENABLED'] = False
 
 mongoengine.connect(os.environ['DATABASE_NAME'], host=os.environ['DATABASE_HOST'])
 
+# We need 'app' on this modules, so we import only here
 from project.api import *

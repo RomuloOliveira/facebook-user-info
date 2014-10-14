@@ -18,7 +18,7 @@ class PersonTest(unittest.TestCase):
 
     def test_add(self):
         data = {
-            'facebook_id': '123456'
+            'facebook_id': '100007710667474'
         }
 
         res = self.client.post('/person', data=data)
