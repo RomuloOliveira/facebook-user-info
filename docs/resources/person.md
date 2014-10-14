@@ -5,7 +5,7 @@ Person REST Resource basic documentation
 
 ## Actions
 - [POST /person](#post-person)
-- [GET /person](#get-personlimitlimit)
+- [GET /person](#get-personlimit)
 - [DELETE /person](#delete-personid)
 
 ## POST /person
