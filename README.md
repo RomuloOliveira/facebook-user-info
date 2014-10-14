@@ -40,6 +40,20 @@ $ virtualenv venv
 $ source venv/bin/activate
 ```
 
+#### Environment
+
+We provide three environments: `devel`, `test` and `prod`. The default environment is `devel`.  
+They are defined in `env` folder, each one in a file.
+Each environment defines a set of variables used in the web service.  
+  
+To change the default environment:
+```bash
+$ export DEFAULT_ENV=devel|test|prod
+```
+
+Additionally, you can use your own environment, called `local` (file `env/local`).  
+In this environment, you don't need to define every variable again, only vars that you want.
+
 #### How to run
 
 ```bash
