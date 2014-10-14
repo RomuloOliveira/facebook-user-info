@@ -38,8 +38,7 @@ Lists *limit* registered users information
 - **limit**: integer
   - Number of users to retrieve information
 
-**Content-type**: `multipart/form-data`  
-**Example**: `curl ­X POST ­F facebook_id=100007710667474 http://localhost:xxxx/person/`
+**Example**: `curl http://localhost:xxxx/person/?limit=xxx`
 
 ### Response
 
@@ -68,5 +67,17 @@ Deletes a user where user.id=:id
 
 ### Request
 
+**Parameters**:
+- **id**: integer
+  - Facebook user id
+
+**Example**: `curl ­X DELETE http://localhost:xxxx/person/100007710667474/`
+
 ### Response
+
+**HTTP Status Code**: 204 (No Content)  
+
+## Remarks
+
+Requests that contains invalid parameters or content-type receives 400 (Bad Request) as HTTP Status Code
 
