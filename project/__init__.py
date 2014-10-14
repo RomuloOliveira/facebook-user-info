@@ -3,6 +3,8 @@
 
 import os
 
+import mongoengine
+
 from flask import Flask
 
 app = Flask(__name__)
@@ -17,5 +19,7 @@ if 'TEST' in os.environ and os.environ['TEST']:
 
 app.config['CSRF_ENABLED'] = False
 app.config['WTF_CSRF_ENABLED'] = False
+
+mongoengine.connect(os.environ['DATABASE_NAME'], host=os.environ['DATABASE_HOST'])
 
 from project.api import *

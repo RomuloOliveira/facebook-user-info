@@ -1,1 +1,3 @@
 export PORT=80
+export DATABASE_NAME=facebook_user_info
+export DATABASE_HOST=localhost
