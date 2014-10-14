@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import logging
 import mongoengine
 
 from flask import Flask
@@ -18,6 +19,11 @@ if 'TEST' in os.environ and os.environ['TEST']:
 
 app.config['CSRF_ENABLED'] = False
 app.config['WTF_CSRF_ENABLED'] = False
+
+logger = logging.getLogger(__name__)
+log_file = open(os.environ['LOG_FILE'], 'w+')
+
+logger.addHandler(log_file)
 
 mongoengine.connect(os.environ['DATABASE_NAME'], host=os.environ['DATABASE_HOST'])
 
