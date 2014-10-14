@@ -63,7 +63,3 @@ def add_user():
         return '', 201
 
     return '', 400
-
-@app.route('/', methods=['GET'])
-def index():
-    return 'hello'

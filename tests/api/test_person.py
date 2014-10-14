@@ -12,10 +12,6 @@ class PersonTest(unittest.TestCase):
         app.config['TESTING'] = True
         self.client = app.test_client()
 
-    def test_index(self):
-        res = self.client.get('/')
-        self.assertEquals(res.status_code, 200)
-
     def test_add(self):
         data = {
             'facebook_id': '100007710667474'
