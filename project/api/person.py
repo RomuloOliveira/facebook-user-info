@@ -2,23 +2,13 @@
 # -*- coding: utf-8 -*-
 
 from project import app
+from project.forms import person
 
 from flask import request
 
-from flask.ext.wtf import Form
-from wtforms import validators
-from wtforms.fields import *
-
-class PersonForm(Form):
-    """Person form definition
-
-    Used in POST /person
-    """
-    facebook_id = StringField('Facebook id', [validators.required()])
-
 @app.route('/person', methods=['POST'])
 def add_user():
-    form = PersonForm(request.form)
+    form = person.PersonForm(request.form)
 
     if form.validate_on_submit():
         return '', 201
