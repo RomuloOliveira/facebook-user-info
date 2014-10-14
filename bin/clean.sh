@@ -2,5 +2,4 @@
 
 set -e
 
-# Clean your files here
-
+find -name '*.pyc' -print0 | xargs --no-run-if-empty -0 rm

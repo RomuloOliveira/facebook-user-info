@@ -2,6 +2,8 @@
 
 set -e
 
+export ENV=test
+
 . bin/build.sh
 
-python run.py
+python tests/run.py

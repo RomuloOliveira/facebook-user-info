@@ -4,8 +4,7 @@ set -e
 
 . bin/clean.sh
 
-# Install your dependencies here
+pip install -r requirements.txt
 
 . bin/configure.sh
 . bin/lint.sh
-

@@ -16,4 +16,3 @@ fi
 if [ -f env/local ]; then
     source env/local
 fi
-
