@@ -9,6 +9,6 @@ REST API for facebook-user-info project
 
 | Resource       | Description            |
 |----------------|------------------------|
-| POST /person   | Adds a new user        |
+| [POST /person](./resources/person.md#post-person)   | Adds a new user        |
 | GET /person    | Lists registered users |
 | DELETE /person | Deletes a user         |
