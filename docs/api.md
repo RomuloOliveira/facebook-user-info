@@ -5,10 +5,10 @@ REST API for facebook-user-info project
 
 ## Resources
 
-### Person
+### [Person](./resources/person.md)
 
-| Resource       | Description            |
-|----------------|------------------------|
-| POST /person   | Adds a new user        |
-| GET /person    | Lists registered users |
-| DELETE /person | Deletes a user         |
+| Resource                                                  | Description            |
+|-----------------------------------------------------------|------------------------|
+| [POST /person](./resources/person.md#post-person)         | Adds a new user        |
+| [GET /person](./resources/person.md#get-personlimit) | Lists registered users |
+| [DELETE /person](./resources/person.md#delete-personid)   | Deletes a user         |
