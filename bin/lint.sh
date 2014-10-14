@@ -2,6 +2,4 @@
 
 set -e
 
-# Setup your lint tools here
-# Please add a script to install them (or include it on build.sh)
-
+flake8 --exclude='build/*,venv/*' --max-line-length=120 --ignore=E302,F403,E261 .
