@@ -53,4 +53,4 @@ TODO
 ### Troubleshooting
 
 **Cannot install some dependencies**  
-Check if `virtualenv` is installed and activated (`virtualenv venv; source venv/bin/activate`)
+Check if `virtualenv` is installed, configured and activated (`virtualenv venv; source venv/bin/activate`)
