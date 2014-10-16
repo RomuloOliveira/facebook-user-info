@@ -81,7 +81,11 @@ TODO
 ### Logging
 
 All server requests, API calls and exceptions are logged. Server requests log uses [Apache's Common Log Format](http://httpd.apache.org/docs/1.3/logs.html#common).  
-Example: `127.0.0.1 - - [16/Oct/2014 19:07:15] "GET /person HTTP/1.1" 200 -`  
+Example:
+```
+127.0.0.1 - - [16/Oct/2014 19:05:47] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [16/Oct/2014 19:07:15] "GET /person HTTP/1.1" 200 -
+```
   
 Exceptions use a custom format: `%(asctime)s - %(levelname)s - [%(pathname)s:%(lineno)d] - %(message)s` (See [this](https://docs.python.org/2/library/logging.html#logrecord-attributes) for more details).
 Example:
