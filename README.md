@@ -78,7 +78,7 @@ $ ./bin/lint.sh
 $ ./bin/coverage.sh
 ```
 
-Example output (updated on Oct 16 2014, 7:45PM):
+Example output (updated on Oct 16 2014, 8:38PM):
 ```
 (...)
 ----------------------------------------------------------------------
@@ -89,17 +89,17 @@ Name                      Stmts   Miss  Cover
 ---------------------------------------------
 project/__init__             25      2    92%
 project/api/__init__          1      0   100%
-project/api/person           51     10    80%
+project/api/person           62      9    85%
 project/forms/__init__        0      0   100%
 project/forms/person          5      0   100%
 project/models/__init__       0      0   100%
 project/models/person         7      0   100%
 tests/__init__                0      0   100%
 tests/api/__init__            0      0   100%
-tests/api/test_person        31      0   100%
+tests/api/test_person        48      0   100%
 tests/run                     4      0   100%
 ---------------------------------------------
-TOTAL                       124     12    90%
+TOTAL                       152     11    93%
 ```
 
 For more info, open `htmlcov/index.html` in a browser. Clicking on modules shows which lines are missing coverage.
