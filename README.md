@@ -78,7 +78,7 @@ $ ./bin/lint.sh
 $ ./bin/coverage.sh
 ```
 
-Example output:
+Example output (updated on Oct 16 2014, 7:45PM):
 ```
 (...)
 ----------------------------------------------------------------------
