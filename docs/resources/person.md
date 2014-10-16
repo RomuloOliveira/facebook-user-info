@@ -4,9 +4,9 @@ Person
 Person REST Resource basic documentation
 
 ## Actions
-- [Adding an user](#post-person)
-- [Listing users](#get-personlimit)
-- [Deleting a registered](#delete-personid)
+- [Adding an user](#adding-an-user)
+- [Listing users](#listing-users)
+- [Deleting a registered](#deleting-a-registered-user)
 
 ## Adding an user
 
