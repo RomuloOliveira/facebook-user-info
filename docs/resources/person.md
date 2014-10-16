@@ -28,7 +28,7 @@ Information retrieved:
   - Facebook user id
 
 **Content-type**: `multipart/form-data`  
-**Example**: `curl ­X POST ­F facebook_id=100007710667474 http://localhost:xxxx/person/`
+**Example**: `curl -X POST -F facebook_id=100007710667474 http://localhost:xxxx/person/`
 
 #### Response
 
@@ -81,7 +81,7 @@ Deletes a user where user.id=:id
 - **id**: string
   - Facebook user id
 
-**Example**: `curl ­X DELETE http://localhost:xxxx/person/100007710667474/`
+**Example**: `curl -X DELETE http://localhost:xxxx/person/100007710667474/`
 
 #### Response
 
