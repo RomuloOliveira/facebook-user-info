@@ -87,7 +87,7 @@ Example:
 127.0.0.1 - - [16/Oct/2014 19:07:15] "GET /person HTTP/1.1" 200 -
 ```
   
-Exceptions use a custom format: `%(asctime)s - %(levelname)s - [%(pathname)s:%(lineno)d] - %(message)s` (See [this](https://docs.python.org/2/library/logging.html#logrecord-attributes) for more details).
+Exceptions use a custom format: `%(asctime)s - %(levelname)s - [%(pathname)s:%(lineno)d] - %(message)s` (See [this](https://docs.python.org/2/library/logging.html#logrecord-attributes) for more details).  
 Example:
 ```
 2014-10-16 18:42:06,354 - CRITICAL - [/home/romulo/projects/facebook-user-info/project/api/person.py:76] - Testing
