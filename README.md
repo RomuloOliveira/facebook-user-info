@@ -7,9 +7,8 @@ A webservice that collects and offers Facebook user infos through a REST api
 
 Please see [this link](./docs/api.md) for documentation.
 
-### Environment
+### Requirements
 
-Requires: 
 - [Python 2.7](https://www.python.org/download/releases/2.7/)
 - [MongoDB](http://www.mongodb.org/), for database
 - [virtualenv](http://virtualenv.readthedocs.org/en/latest/)
