@@ -1,14 +1,13 @@
 facebook-user-info REST API
 ===========================
 
-REST API for facebook-user-info project
+REST API for facebook-user-info project.  
+It allows you to collect and retrieve Facebook's users information through a simple service.
 
 ## Resources
 
 ### [Person](./resources/person.md)
 
-| Resource                                                  | Description            |
-|-----------------------------------------------------------|------------------------|
-| [POST /person](./resources/person.md#post-person)         | Adds a new user        |
-| [GET /person](./resources/person.md#get-personlimit) | Lists registered users |
-| [DELETE /person](./resources/person.md#delete-personid)   | Deletes a user         |
+- [Adding an user](./resources/person.md#post-person)
+- [Listing users](./resources/person.md#get-personlimit)
+- [Deleting a registered user](./resources/person.md#delete-personid)
