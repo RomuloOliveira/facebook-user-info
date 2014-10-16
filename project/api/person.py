@@ -103,4 +103,15 @@ def list_users():
 
 @app.route('/person/<facebook_id>', methods=['DELETE'])
 def delete_user(facebook_id):
-    pass
+    try:
+        person = Persons.objects.get(facebook_id=facebook_id)
+
+        person.delete()
+    except Persons.DoesNotExist as e:
+        app.logger.error(e)
+        return '', 404 # Not found
+    except Exception as e:
+        app.logger.exception(e)
+        return '', 500
+
+    return '', 204
