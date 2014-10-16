@@ -130,3 +130,6 @@ You can change it by setting `LOG_FILE` and `ERROR_LOG_FILE` variables.
 
 **Cannot install some dependencies**  
 Check if `virtualenv` is installed, configured and activated (`virtualenv venv; source venv/bin/activate`)
+
+**socket.error: [Errno 13] Permission denied**
+Server port already in use (maybe it's already running an instance?). Please edit `PORT` on any environment file (`env/` dir) or in `env/local` file
