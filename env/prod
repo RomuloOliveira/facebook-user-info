@@ -1,4 +1,5 @@
 export PORT=80
 export DATABASE_NAME=facebook_user_info
 export DATABASE_HOST=localhost
-export LOG_FILE=./tmp/log
+export LOG_FILE=./tmp/info.log
+export ERROR_LOG_FILE=./tmp/error.log

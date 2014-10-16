@@ -78,6 +78,24 @@ TODO
 ```bash
 ```
 
+### Logging
+
+All server requests, API calls and exceptions are logged. Server requests log uses [Apache's Common Log Format](http://httpd.apache.org/docs/1.3/logs.html#common).  
+Example: `127.0.0.1 - - [16/Oct/2014 19:07:15] "GET /person HTTP/1.1" 200 -`  
+  
+Exceptions use a custom format: `%(asctime)s - %(levelname)s - [%(pathname)s:%(lineno)d] - %(message)s` (See [this](https://docs.python.org/2/library/logging.html#logrecord-attributes) for more details).
+Example:
+```
+2014-10-16 18:42:06,354 - CRITICAL - [/home/romulo/projects/facebook-user-info/project/api/person.py:76] - Testing
+2014-10-16 18:51:09,413 - ERROR - [/home/romulo/projects/facebook-user-info/project/api/person.py:76] - Testing
+Traceback (most recent call last):
+  File "/home/romulo/projects/facebook-user-info/project/api/person.py", line 74, in add_user
+    raise Exception('Testing')
+Exception: Testing
+```
+By default, loggs are saved on `./tmp/info.log` (all levels) and `./tmp/error.log` (_ERROR_ and _CRITICAL_ levels).  
+You can change it by setting `LOG_FILE` and `ERROR_LOG_FILE` variables.
+
 ### Troubleshooting
 
 **Cannot install some dependencies**  

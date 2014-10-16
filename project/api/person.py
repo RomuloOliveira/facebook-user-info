@@ -72,7 +72,7 @@ def add_user():
         try:
             person.save()
         except Exception as e:
-            app.logger.critical(e)
+            app.logger.exception(e)
             return '', 500 # We return 500 because not saving it's our fault
 
         return '', 201
