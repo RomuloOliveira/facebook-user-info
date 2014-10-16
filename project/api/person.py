@@ -41,7 +41,8 @@ def add_user():
     if form.validate_on_submit():
         try:
             person_info = retrieve_person_info(form.facebook_id.data)
-        except Exception:
+        except Exception as e:
+            app.logger.error(e)
             return '', 400
 
         #
@@ -66,7 +67,8 @@ def add_user():
         # Validate before save
         try:
             person.validate()
-        except Exception:
+        except Exception as e:
+            app.logger.error(e)
             return '', 400
 
         try:
