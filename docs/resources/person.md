@@ -4,11 +4,13 @@ Person
 Person REST Resource basic documentation
 
 ## Actions
-- [POST /person](#post-person)
-- [GET /person](#get-personlimit)
-- [DELETE /person](#delete-personid)
+- [Adding an user](#post-person)
+- [Listing users](#get-personlimit)
+- [Deleting a registered](#delete-personid)
 
-## POST /person
+## Adding an user
+
+### POST /person
 
 Register a new user.  
 The system retrieves information about the user using a *facebook_id* and stores it in the database.  
@@ -19,7 +21,7 @@ Information retrieved:
 - Username
 - Gender
 
-### Request
+#### Request
 
 **Parameters**:
 - **facebook_id**: string
@@ -28,17 +30,18 @@ Information retrieved:
 **Content-type**: `multipart/form-data`  
 **Example**: `curl ­X POST ­F facebook_id=100007710667474 http://localhost:xxxx/person/`
 
-### Response
+#### Response
 
 **Content-type**: text/plain  
 **HTTP Status Code**: 201 (Created)  
-  
 
-## GET /person?limit=
+## Listing users
+
+### GET /person?limit=
 
 Lists *limit* registered users information
 
-### Request
+#### Request
 
 **Parameters**:
 - **limit**: integer
@@ -46,7 +49,7 @@ Lists *limit* registered users information
 
 **Example**: `curl http://localhost:xxxx/person/?limit=xxx`
 
-### Response
+#### Response
 
 **Content-type**: application/json  
 **HTTP Status Code**: 200 (OK)  
@@ -66,12 +69,13 @@ Lists *limit* registered users information
 
 **REMARKS**: Top level arrays are NOT safe. See http://incompleteness.me/blog/2007/03/05/json-is-not-as-safe-as-people-think-it-is/ and http://haacked.com/archive/2008/11/20/anatomy-of-a-subtle-json-vulnerability.aspx/.
 
+## Deleting a registered user
 
-## DELETE /person/:id
+### DELETE /person/:id
 
 Deletes a user where user.id=:id
 
-### Request
+#### Request
 
 **Parameters**:
 - **id**: string
@@ -79,7 +83,7 @@ Deletes a user where user.id=:id
 
 **Example**: `curl ­X DELETE http://localhost:xxxx/person/100007710667474/`
 
-### Response
+#### Response
 
 **HTTP Status Code**: 204 (No Content)  
 
