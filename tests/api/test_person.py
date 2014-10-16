@@ -24,6 +24,14 @@ class PersonTest(unittest.TestCase):
         res = self.client.post('/person', data=data)
         self.assertEquals(res.status_code, 201)
 
+    def test_stupid_add(self):
+        data = {
+            'facebook_id': 'blah'
+        }
+
+        res = self.client.post('/person', data=data)
+        self.assertEquals(res.status_code, 400)
+
     def test_try_add_not_valid(self):
         data = {
             'wrong_parameter': '123456'
