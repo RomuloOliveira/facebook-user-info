@@ -24,11 +24,16 @@ Information retrieved:
 #### Request
 
 **Parameters**:
-- **facebook_id**: string
-  - Facebook user id
+
+| Parameter       | Type   | Description      |
+| --------------- | ------ | ---------------- |
+| **facebook_id** | string | Facebook user id |
 
 **Content-type**: `multipart/form-data`  
-**Example**: `curl -X POST -F facebook_id=100007710667474 http://localhost:xxxx/person/`
+**Example request**:  
+```bash
+curl -X POST -F facebook_id=100007710667474 http://localhost:xxxx/person/
+```
 
 #### Response
 
@@ -44,10 +49,17 @@ Lists *limit* registered users information
 #### Request
 
 **Parameters**:
-- **limit**: integer
-  - Number of users to retrieve information
 
-**Example**: `curl http://localhost:xxxx/person/?limit=xxx`
+| Parameter       | Type    | Description                             |
+| --------------- | ------- | --------------------------------------- |
+| **limit**       | integer | Number of users to retrieve information |
+
+
+**Example request**:  
+
+```bash
+curl http://localhost:xxxx/person/?limit=xxx
+```
 
 #### Response
 
@@ -78,10 +90,16 @@ Deletes a user where user.id=:id
 #### Request
 
 **Parameters**:
-- **id**: string
-  - Facebook user id
 
-**Example**: `curl -X DELETE http://localhost:xxxx/person/100007710667474/`
+| Parameter | Type   | Description      |
+| --------- | ------ | ---------------- |
+| **id**    | string | Facebook user id |
+
+
+**Example request**:  
+```bash
+curl -X DELETE http://localhost:xxxx/person/100007710667474/
+```
 
 #### Response
 
